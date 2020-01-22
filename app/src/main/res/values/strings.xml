@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Smart Bed Backrest</string>
+
+    <string name="age_prompt">Select Age</string>
+
+    <string-array name="age_arrays">
+        <item>10 - 30</item>
+        <item>31 - 50</item>
+        <item>51 - 70</item>
+        <item>71 - 90</item>
+        <item>90 - 120</item>
+    </string-array>
+
+</resources>

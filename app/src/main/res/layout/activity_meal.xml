@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MealActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rounded_rectangle"
+        android:layout_alignParentRight="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imgHelp"
+            android:background="@drawable/ic_help_outline_black_24dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_toEndOf="@+id/imgHelp"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HELP"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/imgHelp" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeadline"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Meal Type"
+        android:textSize="30sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOk"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="goToTimerActivity"
+        android:text="Continue"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:cornerRadius="20dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAround"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.5"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Finished at around"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:id="@+id/linearMealTypeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@id/txtAround"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+            android:textSize="35sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:id="@+id/mealTypeGroup"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSolid"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Solid / mostly solid food"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLiquid"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Liquid / mostly liquid food"
+                android:textAlignment="center" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSemiSolid"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Semi Solid food"
+                android:textAlignment="center" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNotSure"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Not sure about type"
+                android:textAlignment="center" />
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnOk"
+        android:layout_below="@id/txtAround"
+        android:layout_centerHorizontal="true"
+        android:descendantFocusability="blocksDescendants"
+        android:timePickerMode="spinner"
+        android:visibility="visible" />
+</RelativeLayout>

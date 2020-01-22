@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "987627797473",
+    "firebase_url": "https://smart-backrest.firebaseio.com",
+    "project_id": "smart-backrest",
+    "storage_bucket": "smart-backrest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987627797473:android:1859dba926a2c1131170a0",
+        "android_client_info": {
+          "package_name": "com.smartbackrest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987627797473-q4jt91prans1d0sph2ov4p2e6u8gsful.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartbackrest",
+            "certificate_hash": "970a4056f5ae7de1e23f526cb9b8092566fa70a0"
+          }
+        },
+        {
+          "client_id": "987627797473-2442aff2jg0koa2l21us2ddkuq14gvnn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK8dKKY0mnt180-yHj4OQPazC_DK31HWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987627797473-2442aff2jg0koa2l21us2ddkuq14gvnn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
